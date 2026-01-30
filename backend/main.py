@@ -3,6 +3,8 @@ import logging
 import os
 import time
 from typing import Dict, Any
+from fastapi import FastAPI, Request as FastAPIRequest
+from fastapi.middleware.cors import CORSMiddleware
 
 
 logging.basicConfig(
@@ -32,7 +34,6 @@ from agentscope_runtime.engine.deployers.local_deployer import (
 
 
 
-
 async def main():
     """Deploy app in detached process mode"""
     print("🚀 Deploying AgentApp in detached process mode...")
@@ -51,9 +52,6 @@ async def main():
     print(f"✅ Deployment successful: {deployment_info['url']}")
     print(f"📍 Deployment ID: {deployment_info['deploy_id']}")
 
-
-    # agent_app.run(host="127.0.0.1", port=8080, web_ui=True)
- 
 
 
 if __name__ == "__main__":

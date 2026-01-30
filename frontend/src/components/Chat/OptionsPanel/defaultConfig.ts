@@ -8,13 +8,13 @@ export default {
       title: 'Runtime WebUI',
     },
   },
-
   sender: {
     attachments: true,
     maxLength: 10000,
     disclaimer:
       'AI can also make mistakes, so please check carefully and use it with caution',
   },
+
   welcome: {
     greeting: 'Hello, how can I help you today?',
     description:
@@ -34,7 +34,7 @@ export default {
     ],
   },
   api: {
-    baseURL: "http://localhost:8080",
+    baseURL: "http://localhost:8080/process",
     token: TOKEN,
   },
 };

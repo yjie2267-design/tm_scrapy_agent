@@ -9,6 +9,7 @@ import uuid
 from pathlib import Path
 from typing import Optional
 
+from pydantic import BaseModel, Field
 from agentscope_runtime.engine.schemas.agent_schemas import (
     AgentRequest,
     FileContent,
@@ -361,6 +362,53 @@ def sync_handler(request: AgentRequest):
     yield {"status": "ok", "payload": request}
 
 
+def save_file_from_binary(file_data: bytes, filename: str) -> dict:
+    """Save binary file to uploads directory.
+
+    Args:
+        file_data: File binary data
+        filename: Original filename
+
+    Returns:
+        dict with keys: file_id, file_url, file_path, filename
+
+    Raises:
+        ValueError: If file size exceeds limit
+    """
+    # Ensure uploads directory exists
+    os.makedirs(UPLOADS_DIR, exist_ok=True)
+
+    # Validate file size (10MB limit)
+    if not validate_file_size(file_data):
+        raise ValueError(f"File size exceeds 10MB limit")
+
+    # Generate UUID4 file_id
+    file_id = str(uuid.uuid4())
+
+    # Sanitize filename
+    safe_filename = sanitize_filename(filename)
+
+    # Create file_id subdirectory
+    file_dir = os.path.join(UPLOADS_DIR, file_id)
+    os.makedirs(file_dir, exist_ok=True)
+
+    # Save file
+    file_path = os.path.join(file_dir, safe_filename)
+    with open(file_path, "wb") as f:
+        f.write(file_data)
+
+    # Generate file URL
+    file_url = f"http://localhost:8080/files/{file_id}"
+
+    return {
+        "file_id": file_id,
+        "file_url": file_url,
+        "file_path": file_path,
+        "filename": safe_filename,
+        "size": len(file_data),
+    }
+
+
 @agent_app.endpoint("/files/{file_id}")
 async def file_handler(file_id: str):
     """Serve uploaded files by file_id.
@@ -408,6 +456,44 @@ async def file_handler(file_id: str):
     except Exception as e:
         logging.error(f"Error serving file {file_id}: {e}")
         yield {"error": str(e), "status": 500}
+
+
+class UploadRequest(BaseModel):
+    filename: str = "uploaded_file"
+    file_data: str
+
+
+@agent_app.endpoint("/upload")
+async def upload_handler(body: UploadRequest):
+    """Handle file upload from base64-encoded data.
+
+    Args:
+        body: Request body containing 'filename' and 'file_data' (base64 or data URL)
+
+    Yields:
+        dict with file_id, file_url, filename, size on success
+        dict with error and status on failure
+    """
+    try:
+        if not body.file_data:
+            yield {"error": "Missing file_data", "status": 400}
+            return
+
+        # Use existing save_file_from_base64 function
+        result = save_file_from_base64(body.file_data, body.filename)
+
+        logging.info(
+            f"文件上传成功 - FileID: {result['file_id']}, "
+            f"Filename: {result['filename']}, Size: {result['size']} bytes"
+        )
+
+        yield result
+    except ValueError as e:
+        logging.error(f"文件上传失败: {e}")
+        yield {"error": str(e), "status": 400}
+    except Exception as e:
+        logging.error(f"文件上传失败（未知错误）: {e}", exc_info=True)
+        yield {"error": "Internal server error", "status": 500}
 
 
 @agent_app.endpoint("/async")

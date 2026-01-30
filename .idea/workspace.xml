@@ -2,84 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d0290757-6269-45b6-96f8-a1d7cc6cdb1e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/MarsCodeWorkspaceAppSettings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sisyphus/boulder.json" beforeDir="false" afterPath="$PROJECT_DIR$/.sisyphus/boulder.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sisyphus/notepads/data-collection-agent/issues.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sisyphus/notepads/data-collection-agent/learnings.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.sisyphus/plans/data-collection-agent.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/.env" beforeDir="false" afterPath="$PROJECT_DIR$/backend/.env" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/fixtures.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/fixtures.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/person_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/person_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/models/validators.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/models/validators.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/config.yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/collection_20260126_160714.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/data/output/collection_20260126_161215.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/assets/preview.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/eslint.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/next.config.mjs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/agent/scrapy_agent.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/agent/scrapy_agent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/backend/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/backend/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/postcss.config.mjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hyundai-kona.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hyundai-santa-fe-brown.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hyundai-santa-fe-orange.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/hyundai-santa-fe.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/kia-ev6.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/kia-ev9.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/public/images/kia-tasman.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/api/copilotkit/route.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/globals.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/layout.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/app/page.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/animated-card.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/car-sales-chat.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/chat-message.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/generative-ui/confirm-order.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/generative-ui/contact-info.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/generative-ui/financing-form.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/generative-ui/payment-cards.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/generative-ui/show-car.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/order-cards.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/state-visualizer.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/components/tabs.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-global-state.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-stage-build-car.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-stage-confirm-order.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-stage-get-contact-info.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-stage-get-financing-info.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-stage-get-payment-info.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/stages/use-stage-sell-financing.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types/cars.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types/contact-info.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types/financing-info.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types/orders.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/types/payment-info.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/src/lib/utils/cn.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/tailwind.config.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chat/OptionsPanel/OptionsEditor.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chat/OptionsPanel/OptionsEditor.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chat/OptionsPanel/defaultConfig.ts" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chat/OptionsPanel/defaultConfig.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/frontend/src/components/Chat/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/src/components/Chat/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/frontend/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/wfcms-data.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/collection.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs/test.log" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/shuju.xlsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trs/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trs/agent/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trs/agent/scrapy_agent.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trs/service/__init__.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trs/service/scrapy_service.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/com/trs/tools/excel_reader.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/tm_scrapy_agent.iml" beforeDir="false" afterPath="$PROJECT_DIR$/tm_scrapy_agent.iml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,21 +20,21 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "customColor": "",
-  "associatedIndex": 4
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 4
+}</component>
   <component name="ProjectId" id="38xKMPhUr979DgmaQgKg9vhEXXq" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="d0290757-6269-45b6-96f8-a1d7cc6cdb1e" name="Changes" comment="" />

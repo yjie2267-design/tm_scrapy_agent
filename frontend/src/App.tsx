@@ -3,7 +3,6 @@ import Chat from './components/Chat';
 import { createGlobalStyle } from 'antd-style';
 
 
-
 const GlobalStyle = createGlobalStyle`
 * {
   margin: 0;
@@ -15,7 +14,6 @@ function App() {
   return <>
     <GlobalStyle />
     <Chat />
-
   </>
 }
 

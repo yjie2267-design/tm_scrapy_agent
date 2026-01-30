@@ -2,7 +2,7 @@ import React from 'react';
 import { Form, Input, ColorPicker, Flex, Divider, InputNumber } from 'antd';
 import { createStyles } from 'antd-style';
 import { Button, IconButton, Switch } from '@agentscope-ai/design'
-import { SparkDeleteLine, SparkPlusLine, PaperClipOutlined } from '@agentscope-ai/icons';
+import { SparkDeleteLine, SparkPlusLine } from '@agentscope-ai/icons';
 import FormItem from './FormItem';
 import defaultConfig from './defaultConfig';
 
@@ -90,13 +90,15 @@ const OptionsEditor: React.FC<OptionsEditorProps> = ({
 
         <Divider orientation="left">Sender</Divider>
 
-        <FormItem name={['sender', 'attachments']} label="attachments (文件上传)">
-          <Switch />
-        </FormItem>
 
         <FormItem name={['sender', 'disclaimer']} label="disclaimer" >
           <Input />
         </FormItem>
+
+        <FormItem name={['sender', 'attachments']} label="文件上传" >
+          <Switch />
+        </FormItem>
+
 
         <FormItem name={['sender', 'maxLength']} label="maxLength" >
           <InputNumber min={1000} />
